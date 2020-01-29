@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/constraintLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.ChatActivity"
+    >
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/messageListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/light_grey"
+        android:transcriptMode="alwaysScroll"
+        tools:listitem="@layout/message_item"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/linearLayout"
+        android:paddingTop="5dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        >
+
+        <ImageButton
+            android:id="@+id/sendImgBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_photo_red_24dp"
+            android:layout_margin="3dp"
+            />
+
+        <EditText
+            android:id="@+id/messageEditTxt"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/custom_edittext"
+            android:hint="@string/your_message"
+            android:textColorHint="@android:color/black"
+            android:layout_margin="3dp"
+            />
+
+        <Button
+            android:id="@+id/sendMessageBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:background="@drawable/custom_send_btn"
+            android:enabled="false"
+            android:text="@string/send"
+            android:textColor="@android:color/white"
+            android:layout_margin="3dp"
+            />
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_centerInParent="true"
+        />
+
+</RelativeLayout>

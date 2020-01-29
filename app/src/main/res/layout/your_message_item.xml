@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <ImageView
+        android:id="@+id/photoImgView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/photo"
+        android:scaleType="fitXY"
+        android:layout_marginStart="8dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="8dp"
+        />
+
+    <TextView
+        android:id="@+id/textTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nameTxtView"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@id/photoImgView"
+        android:fontFamily="@font/open_sans_semibold"
+        android:text="@string/message_text"
+        android:textColor="@android:color/white"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:background="@drawable/sended_messages_bubble"
+        android:layout_marginTop="8dp"
+        />
+
+    <TextView
+        android:id="@+id/nameTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/photoImgView"
+        android:fontFamily="@font/open_sans"
+        android:text="@string/user_name"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="5dp"
+        />
+
+    <ImageView
+        android:id="@+id/userImageImgView"
+        android:layout_width="125dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/nameTxtView"
+        android:layout_toEndOf="@id/photoImgView" />
+</RelativeLayout>

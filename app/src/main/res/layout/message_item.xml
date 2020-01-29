@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="2dp"
+    app:cardCornerRadius="5dp"
+    android:elevation="4dp">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        >
+        <ImageView
+            android:id="@+id/photoImgView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/photo"
+            android:scaleType="fitCenter"
+
+            />
+
+        <TextView
+            android:id="@+id/textTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameTxtView"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@id/photoImgView"
+            android:fontFamily="@font/open_sans_semibold"
+            android:text="@string/message_text"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/nameTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@id/photoImgView"
+            android:fontFamily="@font/open_sans_light"
+            android:text="@string/user_name"
+            android:textColor="@android:color/black" />
+
+        <ImageView
+            android:id="@+id/userImageImgView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_toEndOf="@id/photoImgView"
+            android:layout_marginStart="8dp"
+            android:layout_below="@id/nameTxtView"
+            />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
